@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img class="imgPrincipal" src="${show.image_thumbnail_path}">
                 <div class="divName">
                 <h4 class="text-dark">${show.name}</h4>
-                <p class="text-danger statusShow">Finalizada</p>
+                <p class="text-success statusShow">En emision</p>
                 </div>
                 </div>
                 <div class="positionButtonDiv">

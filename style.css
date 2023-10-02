@@ -50,7 +50,6 @@
   &:hover> .card{
     filter: brightness(0.8) blur(4px);
 
-
   }
   } 
   
@@ -66,7 +65,7 @@
   width: 100%;
   height: 100%;
   background-color: #f1f1f1;
-  border: 0 solid transparent;
+  
   
 
 }
@@ -120,19 +119,19 @@
 .div-button {
     display: flex;
     justify-content: flex-end;
+    margin: 10px;
+    align-items: center;
   }
   
   .div-riel {
     position: relative;
-    width: 80px;
-    height: 40px;
+    width: 60px;
+    height: 30px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     background-color: #c4c4c4;
     border-radius: 20px;
-    margin-right: 10px;
-    margin-top: 10px;
     box-shadow: 1px 1px 2px grey,
                 -1px -1px 2px grey;
               
@@ -143,8 +142,8 @@
   .button {
     position: absolute;
     left: 5px;
-    height: 1.8rem;
-    width: 1.8rem;
+    height: 1.5rem;
+    width: 1.5rem;
     border-radius: 25px;
     background-color: skyblue;
     box-shadow: 1px 1px 5px gray;
@@ -156,14 +155,14 @@
   
   .bi-moon-fill {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     transition: all .5s;  
     
   }
   
   .bi-brightness-high-fill {
     color: rgb(221, 221, 70);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     transition: all .5s;  
   }
 
@@ -172,15 +171,15 @@
     background-color: black;
     transition: all .5s;
     position: absolute;
-    height: 1.8rem;
-    width: 1.8rem;
+    height: 1.5rem;
+    width: 1.5rem;
     box-shadow: 1px 1px 5px black;
     
   }
   
   
   .div-riel .active {
-    transform: translateX(40px);
+    transform: translateX(25px);
     cursor: pointer;
     
   }
