@@ -21,19 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
             datosMovies.tv_shows.forEach((show) => {
                 if(show.status == "Running"){
 
-                const card = document.createElement('div');
-                card.classList.add('card');
-                card.classList.add('bg-#f1f1f1')
-                card.innerHTML = `
+                const containerCard = document.createElement('div');
+                containerCard.classList.add('containerCard');
+                containerCard.classList.add('bg-#f1f1f1')
+                containerCard.innerHTML = `
+                <div class="card">
                 <img class="imgPrincipal" src="${show.image_thumbnail_path}">
                 <div class="divName">
                 <h4 class="text-dark">${show.name}</h4>
-                <p class="text-success statusShow">En emision</p>
+                <p class="text-danger statusShow">Finalizada</p>
                 </div>
-                <button class="botonVerMas bg-primary btn btn-outline-light p-2" id="id-${show.id}"type="button">Ver Mas</button>
+                </div>
+                <div class="positionButtonDiv">
+                <div class="buttonDiv">
+                <button class="botonVerMas inactive p-2" id="id-${show.id}"type="button">Ver mas</button>
+                </div>
+                </div>
                 `
                 
-                container.appendChild(card);
+                container.appendChild(containerCard);
 
                 const boton = document.getElementById(`id-${show.id}`)
 
@@ -42,19 +48,26 @@ document.addEventListener('DOMContentLoaded', () => {
            
             })
             } else{
-                const card = document.createElement('div');
-                card.classList.add('card');
-                card.classList.add('bg-#f1f1f1')
-                card.innerHTML = `
+                const containerCard = document.createElement('div');
+                containerCard.classList.add('containerCard');
+                containerCard.classList.add('bg-#f1f1f1')
+                containerCard.innerHTML = `
+                <div class="card">
                 <img class="imgPrincipal" src="${show.image_thumbnail_path}">
                 <div class="divName">
                 <h4 class="text-dark">${show.name}</h4>
                 <p class="text-danger statusShow">Finalizada</p>
                 </div>
-                <button class="botonVerMas bg-primary btn btn-outline-light p-2" id="id-${show.id}"type="button">Ver Mas</button>
+                </div>
+                <div class="positionButtonDiv">
+                <div class="buttonDiv">
+                <button class="botonVerMas inactive p-2" id="id-${show.id}"type="button">Ver mas</button>
+                </div>
+                </div>
+                
                 `
                 
-                container.appendChild(card);
+                container.appendChild(containerCard);
 
                 const boton = document.getElementById(`id-${show.id}`)
 

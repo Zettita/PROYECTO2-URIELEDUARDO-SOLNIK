@@ -2,7 +2,9 @@
     
 }
 
-
+.logoImg {
+  width: 100px;
+}
 .card {
     display: grid;
     justify-content: flex-end;
@@ -110,3 +112,9 @@
     cursor: pointer;
     
   }
+
+  .logoImgFooter{
+    width: 100%;
+    max-width: 250px;  
+  }
+  

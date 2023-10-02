@@ -9,88 +9,87 @@
     <link rel="stylesheet" href="detalles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand text-primary" href="#">Hide and Show's</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarDark">
-                <ul class="navbar-nav me-auto mb-2 mb-xl-0">
-                  <li class="nav-item">
-                    <a class="nav-link text-white" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Nosotros</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white" href="#" tabindex="-1" aria-disabled="true"></a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                  <button class="btn btn-outline-light bg-primary text-white" type="submit">Buscar</button>
-                </form>
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img class="logoImg" src="./img/logo.png" alt="Logo de la web"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarDark">
+            <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input id="inputNav" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-dark" type="submit">Search</button>
+            </form>
+            <div class="div-button">
+              <div class="div-riel" onclick="darkMode(), swipe()">
+              <button id="button" class="button"><i class="bi bi-brightness-high-fill"></i></button>
               </div>
             </div>
-          </nav>
-    </header>
+          </div>
+        </div>
+      </nav>
+</header>
     <a href="index.html">volver atras</a>
-    <div class="div-button">
-      <div class="div-riel" onclick="darkMode(), swipe()">
-      <button id="button" class="button"><i class="bi bi-brightness-high-fill"></i></button>
-      </div>
-      
-    </div>
     
     <div class="containerDetalles">
         
     </div>
     <footer >
-        <div class="container-fluid bg-dark text-primary" >
-            <div class="row p-5 text-center">
-                <div class="col-xs-12 col-md-6 col-lg-3 text-center" >
-                    <h4>LOGO</h4>
-                </div>
-                <div class="col-xs-12 col-md-6 col-lg-3">
-                    <h4>Datos</h4>
-                    <div class="mb-3">
-                      <a href="#" class="text-decoration-none text-white">Terminos y Condiciones</a>
-                    </div>
-                    <div class="mb-3">
-                      <a href="#" class="text-decoration-none text-white">Privacidad</a>
-                    </div>
-                    <div class="mb-3">
-                      <a href="#" class="text-decoration-none text-white">Privacidad</a>
-                    </div>
-                    
-                </div>
-                <div class="col-xs-12 col-md-6 col-lg-3">
-                    <h4>Nosotros</h4>
-                    <div class="mb-3">
-                      <a href="#" class="text-decoration-none text-white">Terminos y Condiciones</a>
-                    </div>
-                    <div class="mb-3">
-                      <a href="#" class="text-decoration-none text-white">Privacidad</a>
-                    </div>
-                    <div class="mb-3">
-                      <a href="#" class="text-decoration-none text-white">Privacidad</a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6 col-lg-3">
-                    <h4>Redes Sociales</h4>
-                    <div class="mb-3">
-                      <a href="#" class="text-decoration-none text-white">Instagram</a>
-                    </div>
-                    <div class="mb-3">
-                      <a href="#" class="text-decoration-none text-white">Facebook</a>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </footer >
+      <div class="container-fluid bg-light text-primary" >
+          <div class="row p-5 text-center">
+              <div class="col-xs-12 col-md-6 col-lg-3 text-center" >
+                <img class="logoImgFooter" src="./img/logo.png" alt="Logo de la web">
+              </div>
+              <div class="col-xs-12 col-md-6 col-lg-3">
+                  <h4>Datos</h4>
+                  <div class="mb-3">
+                    <a href="#" class="text-decoration-none text-secondary">Terminos y Condiciones</a>
+                  </div>
+                  <div class="mb-3">
+                    <a href="#" class="text-decoration-none text-secondary">Privacidad</a>
+                  </div>
+                  <div class="mb-3">
+                    <a href="#" class="text-decoration-none text-secondary">Privacidad</a>
+                  </div>
+                  
+              </div>
+              <div class="col-xs-12 col-md-6 col-lg-3">
+                  <h4>Nosotros</h4>
+                  <div class="mb-3">
+                    <a href="#" class="text-decoration-none text-secondary">Terminos y Condiciones</a>
+                  </div>
+                  <div class="mb-3">
+                    <a href="#" class="text-decoration-none text-secondary">Privacidad</a>
+                  </div>
+                  <div class="mb-3">
+                    <a href="#" class="text-decoration-none text-secondary">Privacidad</a>
+                  </div>
+              </div>
+              <div class="col-xs-12 col-md-6 col-lg-3">
+                  <h4>Redes Sociales</h4>
+                  <div class="mb-3">
+                    <a href="#" class="text-decoration-none text-secondary">Instagram</a>
+                  </div>
+                  <div class="mb-3">
+                    <a href="#" class="text-decoration-none text-secondary">Facebook</a>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </footer >
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./JS/detalles.js"></script>
     <script src="./JS/darkMode.js"></script>

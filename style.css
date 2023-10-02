@@ -1,8 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
+
+.logoImg {
+  width: 100px;
+}
+
+.seriesH2 {
+  background-color: #5aed83;
+  padding: 20px;
+  color: #ffffff
+}
+
 
 .imgPrincipal {
     width: 200px;
@@ -14,40 +29,86 @@
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    min-width: 90%;
+    
 }
 
 
-.card {
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-    align-items: center;
-    text-align: center;
-    margin: 10px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-}
+.containerCard {
+  position: relative;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 5px;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  border-radius: 5px;
+  transition: all 2s ease-in;
+  &:hover> .card{
+    filter: brightness(0.8) blur(4px);
 
 
-.imgContainer>img {
-    margin: 3px;
-    max-width: 100%;
+  }
+  } 
+  
+  
+
+
+.card{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  border: 0 solid transparent;
+  
+
 }
+
 
 .botonVerMas {
-    background-color: #0d6efd;
-    border-radius: 5px;
-    font-size: .9rem;
-    padding: 5px;
-    transition: all .5s;
-    &:hover{
-        color: black;
-        scale: 1.1;
-    }
+  background-color: #35b459;
+  border: 1px solid transparent;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+  text-align: center;
 }
+
+.buttonDiv{
+  display: none;
+}
+
+.positionButtonDiv{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover >.buttonDiv {
+    display: initial;
+  }
+  
+}
+
+
+
+.logoImgFooter{
+  width: 100%;
+  max-width: 250px;  
+}
+
 
 
 
