@@ -16,17 +16,17 @@ document.addEventListener("DOMContentLoaded", () => {
       if (datosMovies) {
         datosMovies.tv_shows.forEach((show) => {
           if (show.status == "Running") {
-            const containerCard = document.createElement("div");
+            const containerCard = document.createElement("article");
             containerCard.classList.add("containerCard");
             containerCard.classList.add("bg-#f1f1f1");
             containerCard.innerHTML = `
-                <div class="card">
+                <article class="card">
                 <img class="imgPrincipal" src="${show.image_thumbnail_path}">
                 <div class="divName">
                 <h4 class="lightItem">${show.name}</h4>
                 <p class="text-success statusShow">En emision</p>
                 </div>
-                </div>
+                </article>
                 <div class="positionButtonDiv">
                 <div class="buttonDiv">
                 <button class="botonVerMas inactive p-2" id="id-${show.id}"type="button">Ver mas</button>
@@ -42,17 +42,17 @@ document.addEventListener("DOMContentLoaded", () => {
               mostrarDetalles(show);
             });
           } else {
-            const containerCard = document.createElement("div");
+            const containerCard = document.createElement("article");
             containerCard.classList.add("containerCard");
             containerCard.classList.add("bg-#f1f1f1");
             containerCard.innerHTML = `
-                <div class="card">
+                <article class="card">
                 <img class="imgPrincipal" src="${show.image_thumbnail_path}">
                 <div class="divName">
                 <h4 class="lightItem">${show.name}</h4>
                 <p class="text-danger statusShow">Finalizada</p>
                 </div>
-                </div>
+                </article>
                 <div class="positionButtonDiv">
                 <div class="buttonDiv">
                 <button class="botonVerMas inactive p-2" id="id-${show.id}"type="button">Ver mas</button>

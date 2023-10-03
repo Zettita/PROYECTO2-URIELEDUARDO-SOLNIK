@@ -103,7 +103,8 @@ body {
   visibility: hidden;
   transition: all .3s ease-in-out;
   position: absolute;
-  bottom: 0;
+  top: 0;
+  
 }
 
 .positionButtonDiv {
@@ -115,7 +116,7 @@ body {
   align-items: center;
   &:hover > .buttonDiv {
     visibility: visible;
-    transform: translateY(-225px);
+    transform: translateY(170px);
   }
 }
 
