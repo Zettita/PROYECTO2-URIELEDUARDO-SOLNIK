@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (showDetails) {
         const card = document.createElement("div");
-        card.classList.add("card");
+        card.classList.add("cardDetalles");
         card.innerHTML = `
             <div class="row">
             <div class="col-lg-auto ">
-            <h4>${showDetails.tvShow.name}</h4>
+            <h4 class="lightItem">${showDetails.tvShow.name}</h4>
             <img class="imgPrincipal" src="${showDetails.tvShow.image_thumbnail_path}"/>
             <ul class="ulGeneros" id="ul-${showDetails.tvShow.id}"></ul>
             </div>
-            <p class="col-lg-9 mt-5">${showDetails.tvShow.description}</p>
+            <p class="col-lg-9 mt-5 lightItem ">${showDetails.tvShow.description}</p>
             </div>
             <div class="row">
             <div class="imgContainer col-sm-auto text-center" id="imgContainer${showDetails.tvShow.id}"></div>
@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showDetails.tvShow.genres.forEach((genero) => {
         console.log(genero);
         const li = document.createElement("li");
+        li.classList.add("lightItem")
         const liText = document.createTextNode(`${genero}`);
         li.appendChild(liText);
         console.log(li);

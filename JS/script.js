@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="card">
                 <img class="imgPrincipal" src="${show.image_thumbnail_path}">
                 <div class="divName">
-                <h4 class="tituloSerie">${show.name}</h4>
+                <h4 class="lightItem">${show.name}</h4>
                 <p class="text-success statusShow">En emision</p>
                 </div>
                 </div>
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="card">
                 <img class="imgPrincipal" src="${show.image_thumbnail_path}">
                 <div class="divName">
-                <h4 class="tituloSerie">${show.name}</h4>
+                <h4 class="lightItem">${show.name}</h4>
                 <p class="text-danger statusShow">Finalizada</p>
                 </div>
                 </div>

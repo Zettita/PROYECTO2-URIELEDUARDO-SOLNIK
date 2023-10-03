@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>That Z's Show</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
@@ -37,22 +37,23 @@
             aria-controls="navbarDark"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            id="botonBorde"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon" id="botonIcono"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarDark">
-            <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+            <ul class="navbar-nav me-auto mb-2 mb-xl-0 ulNav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
+                <a class="lightItem nav-link" aria-current="page" href="index.html"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Generos</a>
+                <a class="lightItem nav-link" href="#">Generos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"
+                <a class="lightItem nav-link" href="#" tabindex="-1" aria-disabled="true"
                   >Tu lista</a
                 >
               </li>
@@ -84,64 +85,66 @@
         </div>
       </nav>
     </header>
-
-    <h2 class="seriesH2">Series:</h2>
+    <hr>
+    <h2 class="seriesH2">Series</h2>
     <div class="container"></div>
+    <hr>
+    <hr style="color: white;">
     <footer>
       <div class="container-fluid text-primary">
-        <div class="row p-5 text-center">
-          <div class="col-xs-12 col-md-6 col-lg-3 text-center">
+        <div class="row p-3 text-center">
+          <div class="col-xs-12 col-md-6 col-lg-3">
             <img
               class="logoImgFooter"
               src="./img/logo.png"
               alt="Logo de la web"
             />
           </div>
-          <div class="col-xs-12 col-md-6 col-lg-3">
-            <h4>Datos</h4>
+          <div class="col-xs-12 col-md-6 col-lg-3 py-5">
+            <h4 >Datos</h4>
             <div class="mb-3">
-              <a href="#" class="text-decoration-none text-secondary"
+              <a href="#" class="text-decoration-none lightItem"
                 >Terminos y Condiciones</a
               >
             </div>
             <div class="mb-3">
-              <a href="#" class="text-decoration-none text-secondary"
+              <a href="#" class="text-decoration-none lightItem"
                 >Privacidad</a
               >
             </div>
             <div class="mb-3">
-              <a href="#" class="text-decoration-none text-secondary"
+              <a href="#" class="text-decoration-none lightItem"
                 >Privacidad</a
               >
             </div>
           </div>
-          <div class="col-xs-12 col-md-6 col-lg-3">
+          <div class="col-xs-12 col-md-6 col-lg-3 py-5">
             <h4>Nosotros</h4>
             <div class="mb-3">
-              <a href="#" class="text-decoration-none text-secondary"
+              <a href="#" class="text-decoration-none lightItem"
                 >Terminos y Condiciones</a
               >
             </div>
             <div class="mb-3">
-              <a href="#" class="text-decoration-none text-secondary"
+              <a href="#" class="text-decoration-none lightItem"
                 >Privacidad</a
               >
             </div>
             <div class="mb-3">
-              <a href="#" class="text-decoration-none text-secondary"
+              <a href="#" class="text-decoration-none lightItem"
                 >Privacidad</a
               >
             </div>
           </div>
-          <div class="col-xs-12 col-md-6 col-lg-3">
+          <div class="col-xs-12 col-md-6 col-lg-3 py-5">
             <h4>Redes Sociales</h4>
             <div class="mb-3">
-              <a href="#" class="text-decoration-none text-secondary"
+              <a href="#" class="text-decoration-none lightItem"
                 >Instagram</a
               >
             </div>
             <div class="mb-3">
-              <a href="#" class="text-decoration-none text-secondary"
+              <a href="#" class="text-decoration-none lightItem"
                 >Facebook</a
               >
             </div>
