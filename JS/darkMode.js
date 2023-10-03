@@ -1,41 +1,58 @@
+const darkModeEvent = document.querySelector(".div-riel");
+darkModeEvent.addEventListener("click", darkMode);
+darkModeEvent.addEventListener("click", swipe);
+
 function darkMode() {
-    document.body.classList.toggle("dark")
-    if (document.body.classList.contains("dark")){
-        const darkModeIcon = document.querySelector(".bi-brightness-high-fill");
+  document.body.classList.toggle("dark");
 
-        darkModeIcon.classList.remove("bi-brightness-high-fill");
+  const nav = document.querySelector(".nav");
+  nav.classList.toggle("darkNav");
 
-        darkModeIcon.classList.add("bi-moon-fill");
+  const botonBuscar = document.getElementById("botonBuscar");
+  botonBuscar.classList.toggle("darkButton");
 
-        const darkModeButton = document.querySelector("#button");
+  const cardDark = document.querySelectorAll(".card");
 
-        darkModeButton.classList.add("buttonSun");
-        
+  cardDark.forEach((card) => {
+    card.classList.toggle("darkCard");
+  });
 
+  const tittleDark = document.querySelectorAll(".tituloSerie");
+  tittleDark.forEach((tittle) => {
+    tittle.classList.toggle("darkTittle");
+  });
 
-    } else {
-        
-        const darkModeIcon = document.querySelector(".bi-moon-fill");
+  if (document.body.classList.contains("dark")) {
+    const darkModeIcon = document.querySelector(".bi-brightness-high-fill");
 
-        darkModeIcon.classList.remove("bi-moon-fill");
+    darkModeIcon.classList.remove("bi-brightness-high-fill");
 
-        darkModeIcon.classList.add("bi-brightness-high-fill");
+    darkModeIcon.classList.add("bi-moon-fill");
 
-        const darkModeButton = document.querySelector("#button");
+    const darkModeButton = document.querySelector("#button");
 
-        darkModeButton.classList.remove("buttonSun");
-    }
-} 
+    darkModeButton.classList.add("buttonSun");
+  } else {
+    const darkModeIcon = document.querySelector(".bi-moon-fill");
 
-function swipeDarkMode() {
-    button.addEventListener('click', swipe());
+    darkModeIcon.classList.remove("bi-moon-fill");
+
+    darkModeIcon.classList.add("bi-brightness-high-fill");
+
+    const darkModeButton = document.querySelector("#button");
+
+    darkModeButton.classList.remove("buttonSun");
+  }
 }
 
-let riel = document.querySelector(".div-riel")
+function swipeDarkMode() {
+  button.addEventListener("click", swipe());
+}
+
+let riel = document.querySelector(".div-riel");
 let boton = document.querySelector("#button");
 
 function swipe() {
-    boton.classList.toggle("active");
-    riel.classList.toggle("active");
-
+  boton.classList.toggle("active");
+  riel.classList.toggle("active");
 }

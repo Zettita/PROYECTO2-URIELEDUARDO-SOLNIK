@@ -1,29 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".containerDetalles");
 
-    
+  const datosMovies = JSON.parse(localStorage.getItem(`moviesPage`));
 
-    const container = document.querySelector('.containerDetalles');
+  console.log(datosMovies);
 
+  const urlParams = new URLSearchParams(window.location.search);
 
-    const datosMovies = JSON.parse(localStorage.getItem(`moviesPage`));
+  const idPelicula = parseInt(urlParams.get("id"));
 
-    console.log(datosMovies);
-
-    const urlParams = new URLSearchParams(window.location.search);
-
-    const idPelicula = parseInt(urlParams.get('id'));
-
-    fetch(`https://www.episodate.com/api/show-details?q=${idPelicula}`)
-    .then(response => response.json())
+  fetch(`https://www.episodate.com/api/show-details?q=${idPelicula}`)
+    .then((response) => response.json())
     .then((datos) => {
-        localStorage.setItem(`moviesDescription`, JSON.stringify(datos));
+      localStorage.setItem(`moviesDescription`, JSON.stringify(datos));
 
-        const showDetails = JSON.parse(localStorage.getItem(`moviesDescription`))
+      const showDetails = JSON.parse(localStorage.getItem(`moviesDescription`));
 
-        if(showDetails) {
-            const card = document.createElement('div');
-            card.classList.add('card')
-            card.innerHTML = `
+      if (showDetails) {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
             <div class="row">
             <div class="col-lg-auto ">
             <h4>${showDetails.tvShow.name}</h4>
@@ -35,64 +31,39 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="row">
             <div class="imgContainer col-sm-auto text-center" id="imgContainer${showDetails.tvShow.id}"></div>
             </div>
-            `
-            container.appendChild(card)
-        }
-        
-        const imgContainer = document.getElementById(`imgContainer${showDetails.tvShow.id}`)
-        console.log(imgContainer); 
-        
-        showDetails.tvShow.pictures.forEach((image) => {
-            console.log(image);
-            const img = document.createElement('img');
-            console.log(img);
-            img.setAttribute('src', image);
-            imgContainer.appendChild(img);
-            
-        })
-        
-        const ulGeneros = document.getElementById(`ul-${showDetails.tvShow.id}`)
+            `;
+        container.appendChild(card);
+      }
 
-        showDetails.tvShow.genres.forEach((genero) =>{
+      const imgContainer = document.getElementById(
+        `imgContainer${showDetails.tvShow.id}`
+      );
+      console.log(imgContainer);
 
-            console.log(genero);
-            const li = document.createElement('li')
-            const liText = document.createTextNode(`${genero}`)
-            li.appendChild(liText)
-            console.log(li);
+      showDetails.tvShow.pictures.forEach((image) => {
+        console.log(image);
+        const img = document.createElement("img");
+        console.log(img);
+        img.setAttribute("src", image);
+        imgContainer.appendChild(img);
+      });
 
-            ulGeneros.appendChild(li);
-        })
+      const ulGeneros = document.getElementById(`ul-${showDetails.tvShow.id}`);
 
-    });       
-})    
-    
+      showDetails.tvShow.genres.forEach((genero) => {
+        console.log(genero);
+        const li = document.createElement("li");
+        const liText = document.createTextNode(`${genero}`);
+        li.appendChild(liText);
+        console.log(li);
 
-    
+        ulGeneros.appendChild(li);
+      });
+    });
+});
 
-    
-    
+const showDetails = JSON.parse(
+  localStorage.getItem(`moviesDescription${idPelicula}`)
+);
 
-    
-
-
-
-
-      
-        
-        const showDetails = JSON.parse(localStorage.getItem(`moviesDescription${idPelicula}`));
-
-         console.log(showDetails);
-
-
-
-
-    
-    
-        
-      
-        
-        
- 
-    
-
+console.log(showDetails);
