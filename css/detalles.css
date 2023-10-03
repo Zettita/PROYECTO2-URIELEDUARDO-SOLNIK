@@ -11,8 +11,22 @@ hr {
   margin: 0;
 }
 
+body {
+  transition: all .3s ease-in-out;
+}
+
+.lightItem{
+  color: rgb(10, 10, 10)
+  
+}
+
+.logoImgA {
+  margin: 0;
+  padding: 0;
+}
+
 .logoImg {
-  width: 100px;
+  width: 150px;
 }
 
 .bi-arrow-left{
