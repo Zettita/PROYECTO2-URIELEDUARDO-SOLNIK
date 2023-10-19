@@ -1,61 +1,32 @@
-const darkModeEvent = document.querySelector(".div-riel");
-darkModeEvent.addEventListener("click", darkMode);
-darkModeEvent.addEventListener("click", swipe);
+const divRiel = document.querySelector(".div-riel");
+divRiel.addEventListener("click", darkMode);
 
 function darkMode() {
   document.body.classList.toggle("dark");
 
+  const boton = document.querySelector("#button");
+  boton.classList.toggle("active");
+
+  const darkModeIcon = document.querySelector("#iconMode");
+
+  darkModeIcon.classList.toggle("bi-moon-fill");
+
   const nav = document.querySelector(".nav");
   nav.classList.toggle("darkNav");
 
-  const botonBuscar = document.getElementById("botonBuscar");
-  botonBuscar.classList.toggle("darkButton");
-
-  const botonBorde = document.getElementById("botonBorde");
-  botonBorde.classList.toggle("darkButton");
-
   const cardDark = document.querySelectorAll(".card");
-
   cardDark.forEach((card) => {
     card.classList.toggle("darkCard");
   });
 
-  const lightItem = document.querySelectorAll(".lightItem");
+  const lightItem = document.querySelectorAll(".toggleItem");
   lightItem.forEach((item) => {
     item.classList.toggle("darkItem");
   });
 
   if (document.body.classList.contains("dark")) {
-    const darkModeIcon = document.querySelector(".bi-brightness-high-fill");
-
-    darkModeIcon.classList.remove("bi-brightness-high-fill");
-
-    darkModeIcon.classList.add("bi-moon-fill");
-
-    const darkModeButton = document.querySelector("#button");
-
-    darkModeButton.classList.add("buttonSun");
+    localStorage.setItem("modoOscuro", "activo");
   } else {
-    const darkModeIcon = document.querySelector(".bi-moon-fill");
-
-    darkModeIcon.classList.remove("bi-moon-fill");
-
-    darkModeIcon.classList.add("bi-brightness-high-fill");
-
-    const darkModeButton = document.querySelector("#button");
-
-    darkModeButton.classList.remove("buttonSun");
+    localStorage.setItem("modoOscuro", "inactivo");
   }
-}
-
-function swipeDarkMode() {
-  button.addEventListener("click", swipe());
-}
-
-let riel = document.querySelector(".div-riel");
-let boton = document.querySelector("#button");
-
-function swipe() {
-  boton.classList.toggle("active");
-  riel.classList.toggle("active");
 }

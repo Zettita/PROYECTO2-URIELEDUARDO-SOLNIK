@@ -12,12 +12,11 @@ hr {
 }
 
 body {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.lightItem{
-  color: rgb(10, 10, 10)
-  
+.lightItem {
+  color: rgb(10, 10, 10);
 }
 
 .logoImgA {
@@ -29,7 +28,7 @@ body {
   width: 150px;
 }
 
-.bi-arrow-left{
+.bi-arrow-left {
   font-size: 3rem;
   margin: 10px;
 }
@@ -78,16 +77,12 @@ body {
   background-color: rgb(32, 32, 32);
 }
 
-
-
 .dark {
   background-color: rgb(32, 32, 32);
-  transition: all 0.5s ease-in-out;
 }
 
 .darkCard {
   background-color: rgb(45, 45, 45);
-  transition: all 0.5s ease-in-out;
 }
 
 .darkButton {
@@ -102,7 +97,6 @@ body {
 
 .darkItem {
   color: #ffffff;
-  transition: all 0.5s ease-in-out;
 }
 
 .div-button {
@@ -130,10 +124,15 @@ body {
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 25px;
-  background-color: skyblue;
+  background-color: rgb(0, 0, 0);
   box-shadow: 1px 1px 5px gray;
   cursor: pointer;
   border: none;
+  transition: all 0.5s;
+}
+.bi-brightness-high-fill {
+  color: rgb(221, 221, 70);
+  font-size: 1.1rem;
   transition: all 0.5s;
 }
 
@@ -143,15 +142,9 @@ body {
   transition: all 0.5s;
 }
 
-.bi-brightness-high-fill {
-  color: rgb(221, 221, 70);
-  font-size: 1.1rem;
-  transition: all 0.5s;
-}
-
-.buttonSun {
+.inactivo {
   border: 1px solid inherit;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(83, 181, 238);
   transition: all 0.5s;
   position: absolute;
   height: 1.5rem;
@@ -159,7 +152,15 @@ body {
   box-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 
-.div-riel .active {
+.active {
   transform: translateX(25px);
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.div-riel {
   cursor: pointer;
 }
